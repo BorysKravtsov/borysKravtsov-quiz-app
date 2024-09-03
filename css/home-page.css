@@ -1,27 +1,56 @@
 :root {
   --contrast-color: #c7ef00;
+  --contrastLight-color: #def95a;
   --bg-color: #fff;
   --bg-colorD: #241623;
   --element-color: #3c787e;
   --darkElement-color: #3c787e;
   --add-color: #d0cd94;
   --text-color: #fff;
+  --tp-colorLight: #d0cd94ef;
+  --tp-colorDark: #3c787ef1;
 }
 
 .homepage__cards {
   display: flex;
+  justify-content: center;
+  max-width: 100%;
+  flex-wrap: wrap;
 }
 
 .card__container {
   display: flex;
-  justify-content: space-around;
+  position: relative;
+  justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
+  min-width: 400px;
+  padding: 40px 30px;
   max-width: 420px;
-  height: 300px;
+  height: 260px;
   flex-direction: column;
-  background: var(--element-color);
+  background: linear-gradient(0deg, var(--tp-colorLight), var(--tp-colorDark)),
+    url(../images/card-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   margin: 60px;
+  border-radius: 10px;
+}
+
+.card__bookmark {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 15px;
+}
+
+.card__bookmark:hover {
+  filter: brightness(2);
+}
+
+.card__bookmarkImg {
+  height: 45px;
+  width: 45px;
 }
 
 h2 {
@@ -32,15 +61,44 @@ h2 {
   color: var(--text-color);
 }
 
+.card__btnContainer {
+  position: relative;
+  display: inline-block;
+}
+
 .card__answerBtn {
   padding: 10px 20px;
   color: var(--bg-colorD);
   background-color: var(--contrast-color);
   border-radius: 5px;
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
+  color: transparent;
   font-style: normal;
   font-size: 14px;
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.card__answerBtn::before {
+  content: "Show answer";
+  display: block;
+  transition: opacity 0.5s ease-in-out;
+  color: var(--bg-colorD);
+}
+
+.card__answerBtn:active::before {
+  content: "George Washington";
+  opacity: 1;
+  color: var(--bg-colorD);
+}
+
+.card__answerBtn:hover {
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: var(--contrastLight-color);
+  box-shadow: 0px 0px 10px var(--contrast-color);
 }
 
 .card__hashtags {
@@ -59,4 +117,30 @@ h2 {
   font-weight: 400;
   font-style: normal;
   font-size: 10px;
+}
+
+@media (max-width: 1280px) {
+  .card__container {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 1028px) {
+  .card__container {
+    margin: 60px 30px;
+  }
+}
+@media (max-width: 768px) {
+  .homepage__cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card__container {
+    min-width: auto;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
 }
