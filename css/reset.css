@@ -126,3 +126,15 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+button {
+  all: unset; /* Reset all styles */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  display: inline-block; /* Allows setting width and height */
+  cursor: pointer; /* Ensures the cursor shows the pointer icon */
+  text-align: center; /* Centers the text */
+}
+
+button:focus {
+  outline: none; /* Removes the default outline */
+}

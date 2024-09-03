@@ -1,0 +1,62 @@
+:root {
+  --contrast-color: #c7ef00;
+  --bg-color: #fff;
+  --bg-colorD: #241623;
+  --element-color: #3c787e;
+  --darkElement-color: #3c787e;
+  --add-color: #d0cd94;
+  --text-color: #fff;
+}
+
+.homepage__cards {
+  display: flex;
+}
+
+.card__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 30px;
+  max-width: 420px;
+  height: 300px;
+  flex-direction: column;
+  background: var(--element-color);
+  margin: 60px;
+}
+
+h2 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24px;
+  color: var(--text-color);
+}
+
+.card__answerBtn {
+  padding: 10px 20px;
+  color: var(--bg-colorD);
+  background-color: var(--contrast-color);
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+}
+
+.card__hashtags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card__tag {
+  background-color: var(--bg-colorD);
+  color: var(--text-color);
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10px;
+}
