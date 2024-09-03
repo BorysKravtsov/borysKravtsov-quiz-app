@@ -7,9 +7,124 @@
   --add-color: #d0cd94;
 }
 
-.logo {
+body {
+  background-color: var(--bg-color);
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 30px;
+}
+
+.header {
+  background-color: var(--bg-colorD);
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+}
+
+.logo__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 220px;
+}
+
+.logo__text {
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 40px;
+  color: white;
+}
+
+.logo__img {
+  height: 40px;
+  filter: invert(1);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  width: 100%;
+}
+
+.nav a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  color: white;
+  position: relative;
+  display: inline-block;
+}
+
+.nav a:hover {
+  cursor: pointer;
+}
+
+.nav a:hover::before {
+  animation: underlineNav 0.5s forwards;
+}
+
+.nav a::before {
+  content: "";
+  position: absolute;
+  bottom: calc(50% - 2px);
+  left: -5%;
+  width: 0;
+  height: 2px;
+  background-color: var(--contrast-color);
+  transform: width 0.5s;
+}
+
+@keyframes underlineNav {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 110%;
+  }
+}
+
+.nav__mobile {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  height: 55px;
+  background-color: var(--bg-colorD);
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav__mobile a:hover {
+  filter: brightness(0) saturate(100%) invert(98%) sepia(68%) saturate(6260%)
+    hue-rotate(10deg) brightness(93%) contrast(102%);
+  cursor: pointer;
+}
+
+.nav__mobile a img {
+  filter: invert(1);
+  max-height: 30px;
+}
+
+@media (max-width: 768px) {
+  .header__inner {
+    justify-content: center;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav__mobile {
+    display: flex;
+  }
 }

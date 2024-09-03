@@ -10,6 +10,12 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,700;1,700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
@@ -17,12 +23,27 @@
     <header class="header">
       <div class="container">
         <div class="header__inner">
-          <div class="logo">Quiz App</div>
-          <img src="./images/logo-rubik.png" alt="rubik" />
+          <a class="logo__container" href="#">
+            <div class="logo__text">Quiz App</div>
+            <img class="logo__img" src="./images/logo-rubik.png" alt="rubik" />
+          </a>
+
           <nav class="nav">
-            <div class="homepage">Homepage</div>
-            <div class="bookmarks">Bookmarks</div>
-            <div class="profile">Profile</div>
+            <a class="homepage">Homepage</a>
+            <a class="bookmarks">Bookmarks</a>
+            <a class="profile">Profile</a>
+          </nav>
+
+          <nav class="nav__mobile">
+            <a class="homepage"
+              ><img src="./images/nav-icons/home-icon.png" alt="home"
+            /></a>
+            <a class="bookmarks"
+              ><img src="./images/nav-icons/bookmark-icon.png" alt="bookmarks"
+            /></a>
+            <a class="profile"
+              ><img src="./images/nav-icons/user-icon.png" alt="user"
+            /></a>
           </nav>
         </div>
       </div>
