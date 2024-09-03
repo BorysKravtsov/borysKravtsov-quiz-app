@@ -1,0 +1,15 @@
+:root {
+  --contrast-color: #c7ef00;
+  --bg-color: #fff;
+  --bg-colorD: #241623;
+  --element-color: #3c787e;
+  --darkElement-color: #3c787e;
+  --add-color: #d0cd94;
+}
+
+.logo {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 40px;
+}
