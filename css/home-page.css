@@ -10,7 +10,9 @@
   --tp-colorLight: #d0cd94ef;
   --tp-colorDark: #3c787ef1;
 }
-
+.homepage__inner {
+  margin: 100px 0 50px;
+}
 .homepage__cards {
   display: flex;
   justify-content: center;
