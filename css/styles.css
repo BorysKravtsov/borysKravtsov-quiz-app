@@ -1,10 +1,14 @@
 :root {
   --contrast-color: #c7ef00;
+  --contrastLight-color: #def95a;
   --bg-color: #fff;
   --bg-colorD: #241623;
   --element-color: #3c787e;
   --darkElement-color: #3c787e;
   --add-color: #d0cd94;
+  --text-color: #fff;
+  --tp-colorLight: #d0cd94ef;
+  --tp-colorDark: #3c787ef1;
 }
 
 body {

@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/home-page.css" />
+    <link rel="stylesheet" href="./css/profile.css" />
   </head>
   <body>
     <header class="header">
@@ -60,7 +61,61 @@
       </div>
     </header>
     <main class="main">
-      <section class="profile"></section>
+      <section class="profile">
+        <div class="container">
+          <div class="profile__inner">
+            <div class="profile__info">
+              <div class="profile__picContainer">
+                <img
+                  src="./images/profile-pic.png"
+                  alt="your photo"
+                  class="profile__pic"
+                />
+                <a href="#" class="profile__picChange">Add your photo</a>
+              </div>
+              <div class="profile__text">
+                <h2 class="profile__nickname">Borys</h2>
+                <p class="profile__about">
+                  Hi there! I'm a 25-year-old web development enthusiast
+                  currently based in Berlin. I'm currently sharpening my skills
+                  at the Spiced Academy bootcamp, where I'm diving deep into
+                  JavaScript, HTML, CSS, and React. Before transitioning into
+                  web development, I worked as a 3D designer and motion
+                  designer, bringing creative ideas to life through visual
+                  storytelling. I'm excited to combine my design background with
+                  my new coding skills to create engaging, interactive web
+                  experiences.
+                </p>
+              </div>
+            </div>
+            <div class="profile__buttons">
+              <button class="profile__counterBtn">
+                <p>5</p>
+                <img
+                  src="./images/profileBtns-icons/countBtn-icon.png"
+                  alt="exclamation and question mark"
+                  class="counterBtn__icon"
+                />
+              </button>
+              <button class="profile__counterBtn">
+                <p>15</p>
+                <img
+                  src="./images/profileBtns-icons/bookmarkBtn-icon.png"
+                  alt="bookmark"
+                  class="bookmarkBtn__icon"
+                />
+              </button>
+            </div>
+            <div class="profile__params">
+              <a class="profile__settings"> Settings </a>
+              <div class="profile__theme">
+                <p class="profile__darkMode">Dark mode</p>
+                <button class="profile__themeSwitch">OFF</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
