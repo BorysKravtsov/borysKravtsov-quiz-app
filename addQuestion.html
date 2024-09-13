@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add question</title>
+    <link rel="icon" href="./images/logo-rubik.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/addQuestion.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="logo__container" href="#">
+            <div class="logo__text">
+              Quiz<img
+                class="logo__img"
+                src="./images/logo-rubik.png"
+                alt="rubik"
+              /><span>App</span>
+            </div>
+          </a>
+
+          <nav class="nav">
+            <a class="homepage" href="./index.html">Homepage</a>
+            <a class="bookmarks" href="./bookmark.html">Bookmarks</a>
+            <a class="addQuestion" href="./addQuestion.html">Add question</a>
+            <a class="profile" href="./profile.html">Profile</a>
+          </nav>
+          <nav class="nav__mobile">
+            <div class="nav__mobile-container">
+              <a class="homepage"
+                ><img src="./images/nav-icons/home-icon.png" alt="home"
+              /></a>
+              <a class="bookmarks"
+                ><img
+                  src="./images/nav-icons/bookmark-icon.png"
+                  alt="bookmarks"
+              /></a>
+              <a class="add"
+                ><img src="./images/nav-icons/add-icon.png" alt="add question"
+              /></a>
+              <a class="profile"
+                ><img src="./images/nav-icons/user-icon.png" alt="user"
+              /></a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="qForm">
+        <div class="container">
+          <div class="qForm__inner">
+            <form action="" class="form__questions">
+              <h2 class="form__heading">What is your question?</h2>
+              <textarea
+                name="question"
+                id="question"
+                maxlength="120"
+                placeholder="Your question"
+              ></textarea>
+              <p class="question__counter">76 characters left</p>
+              <h2 class="form__heading">What is your answer?</h2>
+              <textarea
+                name="answer"
+                id="answer"
+                maxlength="120"
+                placeholder="Your answer"
+              ></textarea>
+              <p class="answer__counter">76 characters left</p>
+              <h2 class="form__heading">Add some tags</h2>
+              <textarea
+                class="tag"
+                name="tag"
+                id="tag"
+                placeholder="Your tags"
+                maxlength="30"
+              ></textarea>
+              <button class="submit">submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
