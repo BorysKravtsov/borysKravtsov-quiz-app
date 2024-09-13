@@ -53,6 +53,11 @@
 .card__bookmarkImg {
   height: 45px;
   width: 45px;
+  filter: saturate(0) brightness(1);
+}
+
+.card__bookmarkImgS {
+  filter: saturate(1);
 }
 
 h2 {
