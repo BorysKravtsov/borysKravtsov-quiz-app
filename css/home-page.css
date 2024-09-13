@@ -63,42 +63,62 @@ h2 {
   color: var(--text-color);
 }
 
+.card__answer {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 25px;
+  text-align: center;
+  font-size: 20px;
+  color: var(--text-color);
+  --answerOpacity: 1;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.card__answer::after {
+  position: absolute;
+  content: "Answer";
+  text-align: center;
+  font-size: 16px;
+  line-height: 30px;
+  top: calc(0px - 15%);
+  left: calc(0px - 10%);
+  height: 130%;
+  width: 120%;
+  background-color: var(--bg-colorD);
+  color: var(--text-color);
+  opacity: var(--answerOpacity);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
 .card__btnContainer {
   position: relative;
   display: inline-block;
 }
 
-.card__answerBtn {
+.card__btn {
   padding: 10px 20px;
   color: var(--bg-colorD);
   background-color: var(--contrast-color);
   border-radius: 5px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  color: transparent;
+  color: var(--bg-colorD);
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
   text-align: center;
-  transition: all 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
-.card__answerBtn::before {
-  content: "Show answer";
-  display: block;
-  transition: opacity 0.5s ease-in-out;
-  color: var(--bg-colorD);
-}
-
-.card__answerBtn:active::before {
-  content: "George Washington";
-  opacity: 1;
-  color: var(--bg-colorD);
-}
-
-.card__answerBtn:hover {
-  padding: 12px 24px;
-  font-size: 18px;
+.card__btn:hover {
+  transform: scale(1.25);
   background-color: var(--contrastLight-color);
   box-shadow: 0px 0px 10px var(--contrast-color);
 }
