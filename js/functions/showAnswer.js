@@ -9,6 +9,10 @@ export function showAnswer() {
 
     if (currentOpacity === "1") {
       answer.style.setProperty("--answerOpacity", "0");
-    } else answer.style.setProperty("--answerOpacity", "1");
+      buttonShowAnswer.innerText = "Hide answer";
+    } else {
+      answer.style.setProperty("--answerOpacity", "1");
+      buttonShowAnswer.innerText = "Show answer";
+    }
   });
 }
