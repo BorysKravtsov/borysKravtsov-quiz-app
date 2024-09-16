@@ -107,3 +107,155 @@ h2 {
   background-color: var(--contrastLight-color);
   box-shadow: 0px 0px 10px var(--contrast-color);
 }
+
+.card__container {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 400px;
+  padding: 40px 30px;
+  max-width: 420px;
+  height: 260px;
+  flex-direction: column;
+  background: linear-gradient(0deg, var(--tp-colorLight), var(--tp-colorDark)),
+    url(../images/card-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 60px auto;
+  border-radius: 10px;
+}
+
+.card__bookmark {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 15px;
+}
+
+.card__bookmark:hover {
+  filter: brightness(2);
+}
+
+.card__bookmarkImg {
+  height: 45px;
+  width: 45px;
+  filter: saturate(0) brightness(1);
+}
+
+.card__bookmarkImgS {
+  filter: saturate(1);
+}
+
+.card__question {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24px;
+  color: var(--text-color);
+}
+
+.card__answer {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 25px;
+  text-align: center;
+  font-size: 20px;
+  color: var(--text-color);
+  --answerOpacity: 1;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.card__answer::after {
+  position: absolute;
+  content: "Answer";
+  text-align: center;
+  font-size: 16px;
+  line-height: 30px;
+  top: calc(0px - 15%);
+  left: calc(0px - 10%);
+  height: 130%;
+  width: 120%;
+  background-color: var(--bg-colorD);
+  color: var(--text-color);
+  opacity: var(--answerOpacity);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.card__btnContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.card__btn {
+  padding: 10px 20px;
+  color: var(--bg-colorD);
+  background-color: var(--contrast-color);
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: var(--bg-colorD);
+  font-style: normal;
+  font-size: 14px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card__btn:hover {
+  transform: scale(1.25);
+  background-color: var(--contrastLight-color);
+  box-shadow: 0px 0px 10px var(--contrast-color);
+}
+
+.card__hashtags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card__tag {
+  background-color: var(--bg-colorD);
+  color: var(--text-color);
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10px;
+}
+
+@media (max-width: 1280px) {
+  .card__container {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 1028px) {
+  .card__container {
+    margin: 60px 30px;
+  }
+}
+@media (max-width: 768px) {
+  .homepage__cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card__container {
+    min-width: auto;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
