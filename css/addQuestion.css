@@ -28,6 +28,13 @@ input {
   border-radius: 5px;
 }
 
+input {
+  padding: 0 15px;
+  margin-top: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 h2 {
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;

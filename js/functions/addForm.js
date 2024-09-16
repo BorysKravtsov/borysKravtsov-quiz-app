@@ -1,30 +1,3 @@
-//Show answer func
-const answer = document.querySelector(".card__answer");
-const buttonShowAnswer = document.querySelector(".card__btn");
-
-buttonShowAnswer.addEventListener("click", () => {
-  const currentOpacity = getComputedStyle(answer)
-    .getPropertyValue("--answerOpacity")
-    .trim();
-
-  if (currentOpacity === "1") {
-    answer.style.setProperty("--answerOpacity", "0");
-    buttonShowAnswer.innerText = "Hide answer";
-  } else {
-    answer.style.setProperty("--answerOpacity", "1");
-    buttonShowAnswer.innerText = "Show answer";
-  }
-});
-
-//bookmark func
-const bookMark = document.querySelector(".card__bookmarkImg");
-bookMark.classList.remove("card__bookmarkImgS");
-
-bookMark.addEventListener("click", () => {
-  bookMark.classList.toggle("card__bookmarkImgS");
-});
-
-//add form func
 const form = document.querySelector("form");
 
 form.addEventListener("submit", (event) => {
